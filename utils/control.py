@@ -8,10 +8,10 @@ time.sleep(2)  # Chờ mạch khởi động
 def control(speed=0, angle=0):
     """
     Gửi lệnh điều khiển ESC (speed) và Servo (angle) qua Serial.
-    speed: -25..25
+    speed: -25..50
     angle: -25..25
     """
-    speed = max(min(speed, 25), -25)
+    speed = max(min(speed, 50), -25)
     angle = max(min(angle, 25), -25)
 
     cmd = f"{speed},{angle}\n"
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     try:
         while True:
             try:
-                speed, angle = map(int, input("Enter speed (-25..25) and angle (-25..25): ").split())
+                speed, angle = map(int, input("Enter speed (-25..50) and angle (-25..25): ").split())
             except ValueError:
                 print("Invalid input. Please enter two integers.")
                 continue

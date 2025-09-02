@@ -61,7 +61,7 @@ if __name__ == "__main__":
             # =================================================
 
             # ===== Workspace: chạy chương trình ở đây =====
-            speed = 20
+            speed = 50
             error = 0  # tạm thời giả định xe không lệch
             angle = PID(error, p=0.5, i=0.01, d=0.1)  # PID điều chỉnh góc
 
